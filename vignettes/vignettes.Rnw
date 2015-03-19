@@ -40,14 +40,6 @@ methylated probes and discovering the functional regulatory TFs. This package ca
 applied to TCGA public available cancer data sets and to custom DNA methylation 
 and gene expression data sets. 
 
-\subsection{Installing and loading ELMER}
-To obtain a copy of \Rpackage{ELMER}, you will need to install \Rpackage{devtools}
-<<installing, eval=FALSE>>==
-install.packages(devtools)
-library(devtools);
-devtools::install_github("lijingya/ELMER");
-@
-
 \section{Download example data}
 The following steps can be used to download the example data set for \Rpackage{ELMER}
 <<example.data.run, echo=FALSE, hide=TRUE, message=FALSE, include=FALSE>>=
@@ -418,9 +410,12 @@ of the top 5\% association score. The top 3 associated TFs and the TF family mem
 \label{fig:figure7}}
 \end{figure}
 \end{minipage}
+
 \newpage
-<<finalsession, cache=TRUE>>=
-sessionInfo()
+
+\section{Session Info}
+<<finalsession, results='asis', eval=TRUE>>=
+toLatex(sessionInfo())
 @
 
 \end{document}
